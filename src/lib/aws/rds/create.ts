@@ -1,7 +1,7 @@
 import * as aws from '@pulumi/aws';
 
 import { AWSRdsConfig } from '../../../model/config/aws/rds';
-import { AWSRdsData } from '../../../model/data/rds';
+import { AWSRdsData } from '../../../model/data/aws/rds';
 import { commonLabels, environment, globalName } from '../../configuration';
 import { writeToDoppler } from '../../util/doppler/secret';
 import { createRandomPassword } from '../../util/random';

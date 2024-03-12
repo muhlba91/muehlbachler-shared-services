@@ -1,6 +1,6 @@
 import * as aws from '@pulumi/aws';
 
-import { AWSVpcData } from '../../../model/data/vpc';
+import { AWSVpcData } from '../../../model/data/aws/vpc';
 import { commonLabels } from '../../configuration';
 
 /**

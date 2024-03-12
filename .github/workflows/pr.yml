@@ -135,3 +135,5 @@ jobs:
           PULUMI_ACCESS_TOKEN: "${{ secrets.PULUMI_ACCESS_TOKEN }}"
           AWS_REGION: "${{ secrets.AWS_REGION }}"
           DOPPLER_TOKEN: "${{ secrets.DOPPLER_TOKEN }}"
+          MONGODB_ATLAS_PUBLIC_KEY: "${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}"
+          MONGODB_ATLAS_PRIVATE_KEY: "${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}"

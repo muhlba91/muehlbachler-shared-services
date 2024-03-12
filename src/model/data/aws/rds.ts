@@ -1,6 +1,6 @@
 import * as aws from '@pulumi/aws';
 
-import { RandomPasswordData } from '../random';
+import { RandomPasswordData } from '../../random';
 
 /**
  * Defines AWS RDS data.

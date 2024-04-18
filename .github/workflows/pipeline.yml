@@ -29,15 +29,33 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - uses: hashicorp/vault-action@v3
+        id: import-secrets
+        with:
+          method: jwt
+          url: ${{ secrets.VAULT_ADDR }}
+          path: ${{ secrets.VAULT_PATH }}
+          role: ${{ secrets.VAULT_ROLE }}
+          secrets: |
+            github-muehlbachler-shared-services/data/pulumi access_token | PULUMI_ACCESS_TOKEN ;
+            github-muehlbachler-shared-services/data/google-cloud region | CLOUDSDK_COMPUTE_REGION ;
+            github-muehlbachler-shared-services/data/google-cloud workload_identity_provider | GOOGLE_WORKLOAD_IDENTITY_PROVIDER ;
+            github-muehlbachler-shared-services/data/google-cloud ci_service_account | GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT ;
+            github-muehlbachler-shared-services/data/aws region | AWS_REGION ;
+            github-muehlbachler-shared-services/data/aws identity_role_arn | AWS_IDENTITY_ROLE_ARN ;
+            github-muehlbachler-shared-services/data/doppler token | DOPPLER_TOKEN ;
+            github-muehlbachler-shared-services/data/mongodb-atlas public_key | MONGODB_ATLAS_PUBLIC_KEY ;
+            github-muehlbachler-shared-services/data/mongodb-atlas private_key | MONGODB_ATLAS_PRIVATE_KEY
+
       - uses: 'google-github-actions/auth@v2'
         with:
-          workload_identity_provider: ${{ secrets.GOOGLE_WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ secrets.GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ env.GOOGLE_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_IDENTITY_ROLE_ARN }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ env.AWS_IDENTITY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - run: |
           npm install -g yarn
@@ -51,13 +69,6 @@ jobs:
           command: preview
           stack-name: prod
           refresh: true
-        env:
-          CLOUDSDK_COMPUTE_REGION: "${{ secrets.CLOUDSDK_COMPUTE_REGION }}"
-          PULUMI_ACCESS_TOKEN: "${{ secrets.PULUMI_ACCESS_TOKEN }}"
-          AWS_REGION: "${{ secrets.AWS_REGION }}"
-          DOPPLER_TOKEN: "${{ secrets.DOPPLER_TOKEN }}"
-          MONGODB_ATLAS_PUBLIC_KEY: "${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}"
-          MONGODB_ATLAS_PRIVATE_KEY: "${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}"
 
   deploy:
     runs-on: ubuntu-latest
@@ -78,15 +89,33 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - uses: hashicorp/vault-action@v3
+        id: import-secrets
+        with:
+          method: jwt
+          url: ${{ secrets.VAULT_ADDR }}
+          path: ${{ secrets.VAULT_PATH }}
+          role: ${{ secrets.VAULT_ROLE }}
+          secrets: |
+            github-muehlbachler-shared-services/data/pulumi access_token | PULUMI_ACCESS_TOKEN ;
+            github-muehlbachler-shared-services/data/google-cloud region | CLOUDSDK_COMPUTE_REGION ;
+            github-muehlbachler-shared-services/data/google-cloud workload_identity_provider | GOOGLE_WORKLOAD_IDENTITY_PROVIDER ;
+            github-muehlbachler-shared-services/data/google-cloud ci_service_account | GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT ;
+            github-muehlbachler-shared-services/data/aws region | AWS_REGION ;
+            github-muehlbachler-shared-services/data/aws identity_role_arn | AWS_IDENTITY_ROLE_ARN ;
+            github-muehlbachler-shared-services/data/doppler token | DOPPLER_TOKEN ;
+            github-muehlbachler-shared-services/data/mongodb-atlas public_key | MONGODB_ATLAS_PUBLIC_KEY ;
+            github-muehlbachler-shared-services/data/mongodb-atlas private_key | MONGODB_ATLAS_PRIVATE_KEY
+
       - uses: 'google-github-actions/auth@v2'
         with:
-          workload_identity_provider: ${{ secrets.GOOGLE_WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ secrets.GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ env.GOOGLE_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GOOGLE_WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_IDENTITY_ROLE_ARN }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ env.AWS_IDENTITY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - run: |
           npm install -g yarn
@@ -99,10 +128,3 @@ jobs:
         with:
           command: up
           stack-name: prod
-        env:
-          CLOUDSDK_COMPUTE_REGION: "${{ secrets.CLOUDSDK_COMPUTE_REGION }}"
-          PULUMI_ACCESS_TOKEN: "${{ secrets.PULUMI_ACCESS_TOKEN }}"
-          AWS_REGION: "${{ secrets.AWS_REGION }}"
-          DOPPLER_TOKEN: "${{ secrets.DOPPLER_TOKEN }}"
-          MONGODB_ATLAS_PUBLIC_KEY: "${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}"
-          MONGODB_ATLAS_PRIVATE_KEY: "${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}"

@@ -5,6 +5,7 @@ import { MongoDBClusterConfig } from '../../model/config/mongodb/cluster';
 import { MongoDBClusterData } from '../../model/data/mongodb/atlas';
 import { commonLabels, environment, globalName } from '../configuration';
 import { writeToDoppler } from '../util/doppler/secret';
+import { writeToVault } from '../util/vault/secret';
 
 /**
  * Creates the MongoDB cluster.
@@ -56,13 +57,19 @@ export const createMongoDBCluster = async (
     {},
   );
 
-  cluster.connectionStrings.apply((cs) =>
+  cluster.connectionStrings.apply((cs) => {
     writeToDoppler(
       `MONGODB_ATLAS_${data.name.toUpperCase()}_URI`,
       Output.create(cs[0].standard),
       globalName,
-    ),
-  );
+    );
+
+    writeToVault(
+      `mongodb-atlas-${data.name.toLowerCase()}`,
+      Output.create(JSON.stringify({ uri: cs[0].standard })),
+      globalName,
+    );
+  });
 
   return {
     cluster: cluster,

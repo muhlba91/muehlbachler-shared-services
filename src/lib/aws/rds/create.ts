@@ -1,10 +1,12 @@
 import * as aws from '@pulumi/aws';
+import { all } from '@pulumi/pulumi';
 
 import { AWSRdsConfig } from '../../../model/config/aws/rds';
 import { AWSRdsData } from '../../../model/data/aws/rds';
 import { commonLabels, environment, globalName } from '../../configuration';
 import { writeToDoppler } from '../../util/doppler/secret';
 import { createRandomPassword } from '../../util/random';
+import { writeToVault } from '../../util/vault/secret';
 import { createAWSVpc } from '../network/create';
 
 /**
@@ -141,6 +143,24 @@ export const createRDSInstance = async (
   writeToDoppler(
     `AWS_RDS_${data.name.toUpperCase()}_ADMIN_PASSWORD`,
     password.password,
+    globalName,
+  );
+
+  writeToVault(
+    `aws-rds-${data.name.toLowerCase()}`,
+    all([
+      instance.endpoint,
+      instance.port,
+      instance.username,
+      password.password,
+    ]).apply(([endpoint, port, username, password]) =>
+      JSON.stringify({
+        endpoint: endpoint,
+        port: port.toString(),
+        username: username,
+        password: password,
+      }),
+    ),
     globalName,
   );
 

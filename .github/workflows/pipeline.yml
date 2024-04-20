@@ -36,6 +36,8 @@ jobs:
           url: ${{ secrets.VAULT_ADDR }}
           path: ${{ secrets.VAULT_PATH }}
           role: ${{ secrets.VAULT_ROLE }}
+          exportToken: true
+          outputToken: true
           secrets: |
             github-muehlbachler-shared-services/data/pulumi access_token | PULUMI_ACCESS_TOKEN ;
             github-muehlbachler-shared-services/data/google-cloud region | CLOUDSDK_COMPUTE_REGION ;
@@ -69,6 +71,8 @@ jobs:
           command: preview
           stack-name: prod
           refresh: true
+        env:
+          VAULT_ADDR: "${{ secrets.VAULT_ADDR }}"
 
   deploy:
     runs-on: ubuntu-latest
@@ -96,6 +100,8 @@ jobs:
           url: ${{ secrets.VAULT_ADDR }}
           path: ${{ secrets.VAULT_PATH }}
           role: ${{ secrets.VAULT_ROLE }}
+          exportToken: true
+          outputToken: true
           secrets: |
             github-muehlbachler-shared-services/data/pulumi access_token | PULUMI_ACCESS_TOKEN ;
             github-muehlbachler-shared-services/data/google-cloud region | CLOUDSDK_COMPUTE_REGION ;
@@ -128,3 +134,5 @@ jobs:
         with:
           command: up
           stack-name: prod
+        env:
+          VAULT_ADDR: "${{ secrets.VAULT_ADDR }}"

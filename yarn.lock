@@ -262,9 +262,9 @@
   integrity sha512-gp8pRXC2oOxu0DUE1/M3bYtb1b3/DbJ5aM113+XJBgfXdussRAsX0YOrOhdd8WvnAR6auDBvJomGAkLKA5ydxA==
 
 "@npmcli/package-json@^5.0.0", "@npmcli/package-json@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@npmcli/package-json/-/package-json-5.1.0.tgz#10d117b5fb175acc14c70901a151c52deffc843e"
-  integrity sha512-1aL4TuVrLS9sf8quCLerU3H9J4vtCtgu8VauYozrmEyU57i/EdKleCnsQ7vpnABIH6c9mnTxcH5sFkO3BlV8wQ==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@npmcli/package-json/-/package-json-5.1.1.tgz#ec7339438ae16fcb2216f1c34a0dad707e62d55b"
+  integrity sha512-uTq5j/UqUzbOaOxVy+osfOhpqOiLfUZ0Ut33UbcyyAPJbZcJsf4Mrsyb8r58FoIFlofw0iOFsuCA/oDK14VDJQ==
   dependencies:
     "@npmcli/git" "^5.0.0"
     glob "^10.2.2"
@@ -480,9 +480,9 @@
     resolve "^1.7.1"
 
 "@pulumi/mongodbatlas@^3.14.1":
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.15.0.tgz#8975a0a793f0cf5510b48ee53c7bbcf798fe1c5c"
-  integrity sha512-i2bNN/r1Aio3zt/QOm9GdCW9V6Oi5ZZ8DZ6qMrobrBPuu3Rgyv1dNfOm4LYgAqxX0mCwMdC8bp68U0AEO1l4gQ==
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.15.1.tgz#662f32abae8d37fbcf2b03d49e39ebf36a676d80"
+  integrity sha512-/ziGIeRkPPtAz10ENqGbCutbBE357Zsy9cs5J7pftJtQJVyPmS9iIgVpt6BT7f/fAeSqAd+wefAENERBf6hTww==
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
@@ -677,9 +677,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0":
-  version "20.12.12"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.12.tgz#7cbecdf902085cec634fdb362172dfe12b8f2050"
-  integrity sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==
+  version "20.12.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.13.tgz#90ed3b8a4e52dd3c5dc5a42dde5b85b74ad8ed88"
+  integrity sha512-gBGeanV41c1L171rR7wjbMiEpEI/l5XFQdLLfhr/REwpgDy/4U8y89+i8kRiLzDyZdOkXh+cRaTetUnCYutoXA==
   dependencies:
     undici-types "~5.26.4"
 

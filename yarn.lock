@@ -485,9 +485,9 @@
     resolve "^1.7.1"
 
 "@pulumi/mongodbatlas@^3.14.1":
-  version "3.16.2"
-  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.16.2.tgz#3af1a7f6827508c80fd332e810fb6c7afacb23e1"
-  integrity sha512-9GDJmiOAv7AWnjTquXcDqHI1e651kV7hiCTWnDhstKacg97iJahSk2yezmNtaZu0oD2loME7HVQjGDjIwBfJQA==
+  version "3.16.3"
+  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.16.3.tgz#eafad32eeec90acf49274f3ad95334667b96c971"
+  integrity sha512-63CSp8kw2LnhIOrj64Ap9LFDU4c9HBMXWtsSliCOXKUhnma7AsHWNbiJHAwkuAq2KlO8kXStsS/eNSENzqOpXQ==
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 

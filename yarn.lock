@@ -499,9 +499,9 @@
     resolve "^1.7.1"
 
 "@pulumi/mongodbatlas@^3.14.1":
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.19.0.tgz#fb8a51b8e268b0f1742a4b6b0ae99123cf577358"
-  integrity sha512-erHw99HwVG4Jmlzp8YAqZO6B+LnJwfNb1aExrNXa2524x6z4LVj/744F68b7gpRtNY5H0i8/jQqlCaoOW/GZcw==
+  version "3.19.1"
+  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.19.1.tgz#ca344df32ecdc8306c24bd1cfb0fd02685e92777"
+  integrity sha512-SAhra0quG7+/40O58dEOHpBg0Gt6jMPqIlDQp2Jc/kx6ka0A5e4FiN4glvyN9k3n49nE2rM4Q1C3C/swHpi3rA==
   dependencies:
     "@pulumi/pulumi" "^3.0.0"
 
@@ -719,9 +719,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0":
-  version "22.6.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.6.1.tgz#e531a45f4d78f14a8468cb9cdc29dc9602afc7ac"
-  integrity sha512-V48tCfcKb/e6cVUigLAaJDAILdMP0fUW6BidkPK4GpGjXcfbnoHasCZDwz3N3yVt5we2RHm4XTQCpv0KJz9zqw==
+  version "22.7.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.7.1.tgz#c6a2628c8a68511ab7b68f3be7c9b38716bdf04f"
+  integrity sha512-adOMRLVmleuWs/5V/w5/l7o0chDK/az+5ncCsIapTKogsu/3MVWvSgP58qVTXi5IwpfGt8pMobNq9rOWtJyu5Q==
   dependencies:
     undici-types "~6.19.2"
 

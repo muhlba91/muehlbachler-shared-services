@@ -512,11 +512,11 @@
     resolve "^1.7.1"
 
 "@pulumi/mongodbatlas@^3.14.1":
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.19.1.tgz#ca344df32ecdc8306c24bd1cfb0fd02685e92777"
-  integrity sha512-SAhra0quG7+/40O58dEOHpBg0Gt6jMPqIlDQp2Jc/kx6ka0A5e4FiN4glvyN9k3n49nE2rM4Q1C3C/swHpi3rA==
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.20.0.tgz#cc45c93a61c307533f64a08f688422eb42eda6da"
+  integrity sha512-3QBiYPsESHKamkVAjhGF4GhF5meYzEiPPNh/arRJRoaUZ+FMaDvMwppfpvZ+qIbiiw4VeF5Yb0jThL1Ny4VSig==
   dependencies:
-    "@pulumi/pulumi" "^3.0.0"
+    "@pulumi/pulumi" "^3.42.0"
 
 "@pulumi/pulumi@^3.0.0", "@pulumi/pulumi@^3.42.0", "@pulumi/pulumi@^3.69.0":
   version "3.136.0"

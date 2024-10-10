@@ -73,9 +73,9 @@
     levn "^0.4.1"
 
 "@grpc/grpc-js@^1.10.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.12.1.tgz#e34ac2b7f30cfb1814c0dcf47ba5c69ce7a65858"
-  integrity sha512-VYrLinJNeW3idIZHTy7BsVL7bsPF9+l89WDYTDV8o1QYJzkf3BSoPXdfaz4c8DyeY12LGSaS8m8BgbT8W66h6Q==
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.12.2.tgz#97eda82dd49bb9c24eaf6434ea8d7de446e95aac"
+  integrity sha512-bgxdZmgTrJZX50OjyVwz3+mNEnCTNkh3cIqGPWVNeW9jX6bn1ZkU80uPd+67/ZpIJIjRQ9qaHCjhavyoWYxumg==
   dependencies:
     "@grpc/proto-loader" "^0.7.13"
     "@js-sdsl/ordered-map" "^4.4.2"
@@ -512,9 +512,9 @@
     resolve "^1.7.1"
 
 "@pulumi/mongodbatlas@^3.14.1":
-  version "3.20.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.20.0.tgz#cc45c93a61c307533f64a08f688422eb42eda6da"
-  integrity sha512-3QBiYPsESHKamkVAjhGF4GhF5meYzEiPPNh/arRJRoaUZ+FMaDvMwppfpvZ+qIbiiw4VeF5Yb0jThL1Ny4VSig==
+  version "3.20.1"
+  resolved "https://registry.yarnpkg.com/@pulumi/mongodbatlas/-/mongodbatlas-3.20.1.tgz#266ecb0a4d208a6c05597abc02d0308595a860c8"
+  integrity sha512-V42e2wSxzT8zx3g00iYJL35J2/G/ddctkEPldzvyZB84V33JqLNo5EeG6KWtxx8xmh2uGP6A8bsNQ+0tv/bo0A==
   dependencies:
     "@pulumi/pulumi" "^3.42.0"
 

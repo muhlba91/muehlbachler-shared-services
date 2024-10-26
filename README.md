@@ -2,6 +2,7 @@
 
 [![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/muehlbachler-shared-services/pipeline.yml?style=for-the-badge)](https://github.com/muhlba91/muehlbachler-shared-services/actions/workflows/pipeline.yml)
 [![License](https://img.shields.io/github/license/muhlba91/muehlbachler-shared-services?style=for-the-badge)](LICENSE.md)
+[![](https://api.scorecard.dev/projects/github.com/muhlba91/muehlbachler-shared-services/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/muhlba91/muehlbachler-shared-services)
 
 This repository contains the Shared Services for `muehlbachler` using [Pulumi](http://pulumi.com).
 

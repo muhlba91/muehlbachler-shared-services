@@ -729,11 +729,11 @@ __metadata:
   linkType: hard
 
 "@pulumi/mongodbatlas@npm:^3.14.1":
-  version: 3.21.0
-  resolution: "@pulumi/mongodbatlas@npm:3.21.0"
+  version: 3.22.0
+  resolution: "@pulumi/mongodbatlas@npm:3.22.0"
   dependencies:
-    "@pulumi/pulumi": "npm:^3.136.0"
-  checksum: 10c0/5edb645f722a225e3b98c3e29def1eeacd552ee06e93a195956785a622d0d52486582e7e0a9b9a72dc28bed2a7f402088f5781022c59dae53ca7f9285ea173d3
+    "@pulumi/pulumi": "npm:^3.142.0"
+  checksum: 10c0/a8e617736343319842cb00feb5fb453d333f572f74d87608f9a21674dfa00871381795d5e57a42e9ff5c379e12400209fb48e1293bb2655c3a4aa2ab4aa57813
   languageName: node
   linkType: hard
 

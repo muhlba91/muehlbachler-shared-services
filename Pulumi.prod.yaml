@@ -6,7 +6,7 @@ config:
       backupRetention: 3
       dbAdminUser: postgres
       engine: postgres
-      engineVersion: "14.12"
+      engineVersion: "14.17"
       instanceClass: db.t4g.micro
       name: postgresql
       storage:

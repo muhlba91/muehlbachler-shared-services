@@ -27,7 +27,6 @@
   "packageManager": "yarn@4.10.3",
   "dependencies": {
     "@pulumi/aws": "^7.0.0",
-    "@pulumi/mongodbatlas": "^3.14.1",
     "@pulumi/pulumi": "^3.69.0",
     "@pulumi/random": "^4.14.0",
     "@pulumi/vault": "^7.0.0"

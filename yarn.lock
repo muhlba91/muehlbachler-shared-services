@@ -294,7 +294,6 @@ __metadata:
   dependencies:
     "@eslint/compat": "npm:^1.1.1"
     "@pulumi/aws": "npm:^7.0.0"
-    "@pulumi/mongodbatlas": "npm:^3.14.1"
     "@pulumi/pulumi": "npm:^3.69.0"
     "@pulumi/random": "npm:^4.14.0"
     "@pulumi/vault": "npm:^7.0.0"
@@ -770,15 +769,6 @@ __metadata:
     "@pulumi/pulumi": "npm:^3.142.0"
     mime: "npm:^2.0.0"
   checksum: 10c0/d4026bb44c3603ec4a7e0ea2f79006830d2b95f6eefab82664f7ebdd882a712d09305e9b185b8b797dce5dbc950a67eef09bda6f442a965c68d3ac0e3cf9070f
-  languageName: node
-  linkType: hard
-
-"@pulumi/mongodbatlas@npm:^3.14.1":
-  version: 3.36.1
-  resolution: "@pulumi/mongodbatlas@npm:3.36.1"
-  dependencies:
-    "@pulumi/pulumi": "npm:^3.142.0"
-  checksum: 10c0/9ce708d7c247ac05da179304db5a143255e2c66cf5f99ce705b01c90fdd9ce46c4d2aae33464ebbb7cec871b5fcc6907cc3732d8141bd62d5cf80b849f933026
   languageName: node
   linkType: hard
 

@@ -18,12 +18,12 @@ jobs:
       id-token: write
       contents: read
     strategy:
-      max-parallel: 12
+      max-parallel: 4
       matrix:
-        node-version: ["24"]
+        go-version: [1.25.x]
 
     steps:
-      - uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
+      - uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
         with:
           egress-policy: audit
 
@@ -31,12 +31,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: |
-          corepack enable
-
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+      - uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
         with:
-          node-version: ${{ matrix.node-version }}
+          go-version: "${{ matrix.go-version }}"
 
       - uses: hashicorp/vault-action@4c06c5ccf5c0761b6029f56cfb1dcf5565918a3b # v3.4.0
         id: import-secrets
@@ -71,10 +68,6 @@ jobs:
         with:
           role-to-assume: ${{ env.AWS_IDENTITY_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
-
-      - run: |
-          yarn install --immutable
-          yarn build
 
       - uses: pulumi/actions@d7ceb0215da5a14ec84f50b703365ddf0194a9c8 # v6.6.0
         with:
@@ -93,12 +86,12 @@ jobs:
     needs:
       - preview
     strategy:
-      max-parallel: 12
+      max-parallel: 4
       matrix:
-        node-version: ["24"]
+        go-version: [1.25.x]
 
     steps:
-      - uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
+      - uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
         with:
           egress-policy: audit
 
@@ -106,12 +99,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: |
-          corepack enable
-
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+      - uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
         with:
-          node-version: ${{ matrix.node-version }}
+          go-version: "${{ matrix.go-version }}"
 
       - uses: hashicorp/vault-action@4c06c5ccf5c0761b6029f56cfb1dcf5565918a3b # v3.4.0
         id: import-secrets
@@ -146,10 +136,6 @@ jobs:
         with:
           role-to-assume: ${{ env.AWS_IDENTITY_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
-
-      - run: |
-          yarn install --immutable
-          yarn build
 
       - uses: pulumi/actions@d7ceb0215da5a14ec84f50b703365ddf0194a9c8 # v6.6.0
         with:

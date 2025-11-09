@@ -1,6 +1,3 @@
 name: muehlbachler-shared-services
 description: "muehlbachler: Shared Services"
-runtime:
-  name: nodejs
-  options:
-    typescript: false
+runtime: go

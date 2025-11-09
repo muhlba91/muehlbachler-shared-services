@@ -16,6 +16,3 @@ config:
         cidr: 10.50.0.0/16
         deletionProtection: true
         ipv6Only: false
-  muehlbachler-shared-services:mongodb: {cluster: {name: mongodb, projectId: 65f03ecbfd0cfb0999f03922, provider: AWS, region: EU_WEST_1, size: M0}}
-  muehlbachler-shared-services:secretStores:
-    vault: true

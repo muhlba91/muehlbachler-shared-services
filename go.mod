@@ -3,7 +3,7 @@ module github.com/muhlba91/muehlbachler-shared-services
 go 1.25.3
 
 require (
-	github.com/muhlba91/pulumi-shared-library v0.0.0-20251111095127-9f8a9e7c510c
+	github.com/muhlba91/pulumi-shared-library v0.0.0-20251112044317-143e68cad362
 	github.com/pulumi/pulumi-aws/sdk/v7 v7.11.1
 	github.com/pulumi/pulumi/sdk/v3 v3.206.0
 )
@@ -62,7 +62,7 @@ require (
 	github.com/pulumi/appdash v0.0.0-20231130102222-75f619a67231 // indirect
 	github.com/pulumi/esc v0.17.0 // indirect
 	github.com/pulumi/pulumi-random/sdk/v4 v4.18.4 // indirect
-	github.com/pulumi/pulumi-vault/sdk/v7 v7.4.0 // indirect
+	github.com/pulumi/pulumi-vault/sdk/v7 v7.4.1 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/santhosh-tekuri/jsonschema/v5 v5.0.0 // indirect

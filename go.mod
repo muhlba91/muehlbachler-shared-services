@@ -5,7 +5,7 @@ go 1.25.3
 require (
 	github.com/muhlba91/pulumi-shared-library v0.0.0-20251210072645-fe670cb7a028
 	github.com/pulumi/pulumi-aws/sdk/v7 v7.13.0
-	github.com/pulumi/pulumi/sdk/v3 v3.210.0
+	github.com/pulumi/pulumi/sdk/v3 v3.211.0
 )
 
 require (
@@ -70,7 +70,7 @@ require (
 	github.com/skeema/knownhosts v1.3.0 // indirect
 	github.com/spf13/cast v1.4.1 // indirect
 	github.com/spf13/cobra v1.10.1 // indirect
-	github.com/spf13/pflag v1.0.9 // indirect
+	github.com/spf13/pflag v1.0.10 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/texttheater/golang-levenshtein v1.0.1 // indirect
 	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect

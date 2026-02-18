@@ -160,7 +160,7 @@ func Create(
 		},
 	).(pulumi.StringOutput)
 
-	if _, vsErr := secret.Write(ctx, &secret.WriteArgs{
+	if _, vsErr := secret.Create(ctx, &secret.CreateOptions{
 		Key:   fmt.Sprintf("aws-rds-%s", strings.ToLower(rdsConfig.Name)),
 		Value: secretVal,
 		Path:  config.GlobalName,

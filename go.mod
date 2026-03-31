@@ -3,7 +3,7 @@ module github.com/muhlba91/muehlbachler-shared-services
 go 1.26.0
 
 require (
-	github.com/muhlba91/pulumi-shared-library v0.0.0-20260330065317-1fba95cfa751
+	github.com/muhlba91/pulumi-shared-library v0.0.0-20260331011729-62a860bb0240
 	github.com/pulumi/pulumi-aws/sdk/v7 v7.23.0
 	github.com/pulumi/pulumi/sdk/v3 v3.228.0
 )
